@@ -1,7 +1,11 @@
 .venv/
 .env
+.env.*
+!.env.example
 __pycache__/
 *.pyc
-data/
 storage/
 storage_256/
+data/*
+!data/document.pdf
+.streamlit/secrets.toml
