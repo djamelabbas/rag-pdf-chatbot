@@ -59,14 +59,14 @@ L'API Gemini nécessite une clé Google AI Studio et peut être soumise à des q
 ### 1. Récupérer le projet et préparer Python
 
 ```powershell
-git clone https://github.com/VOTRE-UTILISATEUR/rag-pdf-chatbot.git
+git clone https://github.com/djamelabbas/rag-pdf-chatbot.git
 cd rag-pdf-chatbot
 py -3.11 -m venv .venv
 .\.venv\Scripts\Activate.ps1
 python -m pip install -r requirements.txt
 ```
 
-Remplacez `VOTRE-UTILISATEUR` par votre identifiant GitHub lorsque le dépôt sera publié.
+Remplacez `djamelabbas` par votre identifiant GitHub lorsque le dépôt sera publié.
 
 ### 2. Configurer la clé API
 
@@ -167,3 +167,4 @@ Les fichiers `.env`, `.venv/`, `storage/` et `storage_256/` sont locaux et exclu
 ---
 
 *Projet d'apprentissage — Python, LlamaIndex, LangChain, Gemini et Streamlit.*
+
