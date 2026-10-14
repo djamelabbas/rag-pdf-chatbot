@@ -19,8 +19,8 @@ print(f"Documents extraits : {len(documents)}")
 
 # 3. Découper le texte en morceaux
 splitter = SentenceSplitter(
-    chunk_size=512,
-    chunk_overlap=50
+    chunk_size=256,
+    chunk_overlap=40
 )
 
 nodes = splitter.get_nodes_from_documents(documents)
@@ -37,6 +37,7 @@ index = VectorStoreIndex(
 )
 
 # 5. Sauvegarder l'index localement
-index.storage_context.persist(persist_dir="storage")
+# index.storage_context.persist(persist_dir="storage")
+index.storage_context.persist(persist_dir="storage_256")
 
 print("Indexation terminée !")

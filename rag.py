@@ -15,7 +15,7 @@ embed_model = GoogleGenAIEmbedding(
 )
 
 storage_context = StorageContext.from_defaults(
-    persist_dir="storage"
+    persist_dir="storage_256"
 )
 
 index = load_index_from_storage(
@@ -24,7 +24,7 @@ index = load_index_from_storage(
 )
 
 # 3. Configurer la recherche semantique
-retriever = index.as_retriever(similarity_top_k=3)
+retriever = index.as_retriever(similarity_top_k=2)
 
 # 4. Configurer le LLM via LangChain
 llm = ChatGoogleGenerativeAI(

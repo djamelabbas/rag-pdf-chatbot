@@ -31,7 +31,7 @@ def init_rag():
     )
 
     storage = StorageContext.from_defaults(
-        persist_dir="storage"
+        persist_dir="storage_256"
     )
 
     index = load_index_from_storage(
@@ -39,7 +39,7 @@ def init_rag():
         embed_model=embed_model
     )
 
-    retriever = index.as_retriever(similarity_top_k=3)
+    retriever = index.as_retriever(similarity_top_k=2)
 
     llm = ChatGoogleGenerativeAI(
         model="gemini-3.5-flash-lite"
